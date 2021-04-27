@@ -5,7 +5,7 @@ let formData = {
 };
  
 // method: "POST" is missing from the object below
-let configObj = {
+let submit = {
   headers: {
     "Content-Type": "application/json",
     "Accept": "application/json"
