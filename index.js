@@ -5,7 +5,7 @@ let formData = {
 };
  
 // method: "POST" is missing from the object below
-function submit() = {
+function submit = {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
