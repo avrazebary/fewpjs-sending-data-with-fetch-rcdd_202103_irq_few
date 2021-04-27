@@ -1,13 +1,26 @@
 // Add your code here
-const submitData = {
-  method: "POST",
+let formData = {
+  name: "Avraz",
+  email: "avrazebary@gmail.com"
+};
+ 
+// method: "POST" is missing from the object below
+let configObj = {
   headers: {
     "Content-Type": "application/json",
     "Accept": "application/json"
   },
-  body:
-  {
-    }/* Your data goes here */
-    name: "Avraz",
-    email: "avrazebary@gmail.com"
+  body: JSON.stringify(formData)
 };
+ 
+fetch("http://localhost:3000/dogs", configObj)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(object) {
+    console.log(object);
+  })
+  .catch(function(error) {
+    alert("Bad things! Ragnarők!");
+    console.log(error.message);
+  });
